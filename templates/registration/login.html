@@ -1,0 +1,30 @@
+
+{% extends "shared/base.html" %}
+
+
+
+{% block main %}
+    <div>
+        <h2>Input a valid login details</h2>
+    </div>
+    <div>
+
+        {% if form %}
+          <p>invalid username/password</p>
+        {% endif %}
+        {% if next %}
+          <p>You need to login to access this page</p>
+        {% endif %}
+        
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <p>Username: {{form.username}}</p><br>
+            <p>Password: {{form.password}}</p><br>
+            
+            <p>
+                <input type="submit" value="Login">
+                <input type="hidden" name="next" value="{{ next }}">
+            </p>
+        </form>
+    </div>
+{% endblock main %}

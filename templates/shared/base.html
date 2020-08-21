@@ -1,0 +1,54 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Hijirah Wears</title>
+</head>
+<body>
+    
+    <header>
+        <div class="menudiv">
+            <img width="120px" src=" {% static 'images/mytlogo.png' %} " alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                            
+                                {% comment %} 
+                                    {% if request.user.is_authenticated %}
+                                    <li>Welcome, {{ request.user.username }}</li>
+                                    
+                                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                                    {% else %}
+                                    <li><a href="{% url 'login' %}">Login</a> </li>
+                                    <li><a href="{% url 'register' %}">Sign Up</a> </li>
+                                    {% endif %}  
+                                {% endcomment %}
+                            
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Sign Up</a></li>
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block main %}
+          
+        {% endblock main %}
+    </main>
+
+    <footer>
+        <section class="foot">
+            <center><h4 id="h4">copyright reserved @ Jelmah Tech</h4></center>
+        </section>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script> 
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+.menudiv{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: tomato;
+}
+.menudiv img{
+    padding: 10px;
+}
+.menudiv nav{
+    justify-self: right;
+    padding-right: 40px;
+}
+.menudiv nav ul{
+    padding-top: 30px;
+}
+.menudiv nav ul li{
+    display: inline;
+    padding: 40px 20px 0px 20px;
+}
+.menudiv nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.mainsec1 img{
+    width: 1686px;
+    height: 490px;
+}
+.mainsec2{
+    background-color: grey;
+    width: 80%;
+    margin: 0 auto;
+}
+.mainsec2 h2{
+    text-align: center;
+    padding: 12px;
+    font-size: 30px;
+}
+.all{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+.all div{
+    margin: 20px 0;
+}
+button{
+    background-color: gold;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+.foot{
+    padding: 40px;
+    background-color: tomato;
+}
+#h4{
+    font-size: 30px;
+}
+

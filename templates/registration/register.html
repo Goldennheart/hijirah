@@ -1,0 +1,17 @@
+{% extends "shared/base.html" %}
+
+
+
+{% block main %}
+    <div>
+        <h2>Sign Up an Account</h2>
+    </div>
+    <div>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+{% endblock main %}
